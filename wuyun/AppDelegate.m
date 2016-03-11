@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "UiViewTabBar.h"
+#import "SQLite.h"
 
 @interface AppDelegate ()
+@property(nonatomic,strong) SQLite *sql;
 
 @end
 
@@ -16,7 +19,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    _tab = [[UiViewTabBar alloc] init];
+    
+    _sql = [[SQLite alloc] init];
+    
+    [_sql dataFilePath];
+    
+    _window.rootViewController = _tab;
+   
     return YES;
 }
 

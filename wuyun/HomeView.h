@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HomeView.h
 //  wuyun
 //
 //  Created by hexiangpeng on 15/10/24.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-@property(nonatomic,copy) NSString *link;
+@interface HomeView : UIViewController
+
+
 
 @end
-
